@@ -229,7 +229,7 @@ small {
   flex-direction: column;
   background-color: white;
   padding: 25px;
-  position: absolute;
+  position: fixed;
   left: 50%;
   bottom: 50%;
   transform: translateX(-50%);
@@ -270,6 +270,10 @@ small {
   #root {
     width: 350px;
   }
+
+  .enterMessage {
+    width: 350px;
+  }
   .comments-container {
     width: 350px;
   }
@@ -282,6 +286,8 @@ small {
     background-color: hsl(0, 0%, 100%);
     margin: 15px 0;
     border-radius: 10px;
+    justify-content: center;
+    gap: 0;
   }
 
   .message-container .likes {
@@ -290,6 +296,24 @@ small {
     justify-content: center;
     width: 100%;
     background-color: white;
+    min-height: 20px !important;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .reply p {
+    font-size: 0.8rem !important;
+  }
+
+  .reply img {
+    width: 10px;
+  }
+  .messager-info {
+    display: flex;
+    justify-content: center;
+  }
+  .messager {
+    flex-direction: column;
   }
 
   .message-container .likes p {
