@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import { GlobalContext } from "./context/GlobalContext";
+import Comments from "./components/Comments";
+import Error from "./components/Error";
 
 function App() {
+  const { isShow } = useContext(GlobalContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='comments-container'>
+      {isShow && <Error />}
+      <Comments />
     </div>
   );
 }
